@@ -5,9 +5,55 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="images" href="./images/todo-favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Todo</title>
 </head>
 <body>
+  <header>
+    <div class="header-icon">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="header-title">
+      <i class="fa-solid fa-circle-check"></i>
+      <p>ToDo</p>
+    </div>
+    <div class="header-theme">
+      <input type="checkbox" class="checkbox" id="checkbox" checked="true">
+      <label for="checkbox" class="label">
+        <i class="fa-solid fa-sun"></i>
+        <!-- <div class="ball"></div> -->
+      </label>
+    </div>
+  </header>
+  <section class="sidebar-content">
+    <div class="left-panel">
+      <div class="home">
+        <h2>Home</h2>
+        <div class="all-tasks" id="all-tasks">
+          <img src="./images/task-list.png" alt="all-tasks">
+          <p>all tasks</p>
+        </div>
+        <div class="today" id="today">
+          <img src="./images/only-today.png" alt="today">
+          <p>today</p>
+        </div>
+        <div class="this-week" id="this-week">
+          <img src="./images/this-week.jpeg" alt="this-week">
+          <p>this week</p>
+        </div>
+        <div class="important" id="important">
+          <img src="./images/danger.png" alt="important">
+          <p>important</p>
+        </div>
+        <div class="completed" id="completed">
+          <img src="./images/completed-task.png" alt="completed">
+          <p>completed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="main.js"></script>
 </body>
 </html>
