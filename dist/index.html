@@ -26,52 +26,57 @@
       </label>
     </div>
   </header>
-  <section class="sidebar-content">
-    <div class="left-panel">
-      <div class="home">
-        <h2>Home</h2>
-        <div class="sidebar-container">
-          <div class="all-tasks side" id="all-tasks">
-            <img src="./images/task-list.png" alt="all-tasks">
-            <p>all tasks</p>
+  <main>
+    <section class="sidebar-content">
+      <div class="left-panel">
+        <div class="home">
+          <h2>Home</h2>
+          <div class="sidebar-container">
+            <div class="all-tasks side" id="all-tasks">
+              <img src="./images/task-list.png" alt="all-tasks">
+              <p>all tasks</p>
+            </div>
+            <div class="today side" id="today">
+              <img src="./images/only-today.png" alt="today">
+              <p>today</p>
+            </div>
+            <div class="this-week side" id="this-week">
+              <img src="./images/this-week.jpeg" alt="this-week">
+              <p>this week</p>
+            </div>
+            <div class="important side" id="important">
+              <img src="./images/danger.png" alt="important">
+              <p>important</p>
+            </div>
+            <div class="completed side" id="completed">
+              <img src="./images/completed.png" alt="completed">
+              <p>completed</p>
+            </div>
           </div>
-          <div class="today side" id="today">
-            <img src="./images/only-today.png" alt="today">
-            <p>today</p>
+        </div>
+        <div class="projects-container">
+          <h1 class="project-title">projects</h1>
+          <div class="projects-list"></div>
+          <div class="add-project-container">
+            <div class="add-project-btn">
+              <i class="fas fa-plus"></i>
+              <p>add project</p>
+            </div>
           </div>
-          <div class="this-week side" id="this-week">
-            <img src="./images/this-week.jpeg" alt="this-week">
-            <p>this week</p>
-          </div>
-          <div class="important side" id="important">
-            <img src="./images/danger.png" alt="important">
-            <p>important</p>
-          </div>
-          <div class="completed side" id="completed">
-            <img src="./images/completed.png" alt="completed">
-            <p>completed</p>
+          <!-- <div class="add-project-popup">
+            <input type="text" class="input-project-popup" id="input-project-popup">
+            <div class="popups-btn-container">
+              <button class="btn-add-popup">add</button>
+              <button class="btn-cancel-popup">cancel</button>
+            </div> -->
           </div>
         </div>
       </div>
-      <div class="projects-container">
-        <h1 class="project-title">projects</h1>
-        <div class="projects-list"></div>
-        <div class="add-project-container">
-          <div class="add-project-btn"><i class="fas fa-plus"></i>add project</div>
-        </div>
-        <!-- <div class="add-project-popup">
-          <input type="text" class="input-project-popup" id="input-project-popup">
-          <div class="popups-btn-container">
-            <button class="btn-add-popup">add</button>
-            <button class="btn-cancel-popup">cancel</button>
-          </div> -->
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="projects-content">
-    <div class="projects-preview" id="projects-preview"></div>
-  </section>
+    </section>
+    <section class="projects-content">
+      <div class="projects-preview" id="projects-preview"></div>
+    </section>
+  </main>
   <footer class="footer">
     <p>Copyright &copy;2023 Bismark Agyare</p>
     <a href="https://github.com/bismarkagyare" target="_blank">
