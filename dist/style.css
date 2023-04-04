@@ -118,7 +118,21 @@ label i {
 .side:hover {
   background-color: #FAF8FF;
   opacity: 0.5;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   transition: 500ms linear; 
   border-radius: 5px;
+}
+
+/* projects container */
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-container h1 {
+  border-bottom: 2px solid #000;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
 }
