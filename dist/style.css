@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500&family=Scope+One&display=swap');
+
+:root {
+  --header: #77b5d9;
+  --sidebar: #d7eaf3;
+  --project-clr: #14397d;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +15,10 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  height: 100%;
+  width: 100%;
+  font-family: 'Lato', cursive;
 }
 
 header {
@@ -17,6 +28,7 @@ header {
   font-size: 2.5rem;
   padding: 10px 20px;
   font-weight: 900;
+  background: var(--header);
 }
 
 .header-title i {
@@ -55,4 +67,58 @@ label i {
 .checkbox{
   opacity: 0;
   position: absolute;
+}
+
+.sidebar-content {
+  width: 30%;
+  height: inherit;
+  background: var(--sidebar);
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.2rem;
+}
+
+.home h2 {
+  border-bottom: 2px solid #000;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.home img {
+  width: 27px;
+  height: 27px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.all-tasks, .today, 
+.this-week, .completed,
+.important {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-family: 'Poppins', cursive;
+  font-size: 1.3rem;
+}
+
+.side:hover {
+  background-color: #FAF8FF;
+  opacity: 0.5;
+  transform: scale(1.1);
+  transition: 500ms linear; 
+  border-radius: 5px;
 }
