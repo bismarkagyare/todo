@@ -47,6 +47,11 @@ header {
   user-select: none;
 }
 
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
 label {
   display: flex;
   justify-content: space-between;
@@ -70,7 +75,6 @@ label i {
 }
 
 .sidebar-content {
-  width: 30%;
   height: inherit;
   background: var(--sidebar);
 }
@@ -147,4 +151,29 @@ label i {
   text-transform: capitalize;
   font-family: 'Poppins', cursive;
   font-size: 1.3rem;
+}
+
+.add-project-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+/* footer styles */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  font-family: 'Scope One', cursive;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: var(--header);
+}
+
+.footer i {
+  color: #fff;
+  font-size: 2rem;
 }
