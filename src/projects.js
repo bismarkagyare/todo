@@ -56,15 +56,15 @@ export class Projects {
     });
   }
 
-  // filterTodosByWeek() {
-  //   const today = new Date();
-  //   const nextWeek = new Date(today.getFullYear(), today.getMonth(), today.getDay() + 7);
-  //   const formattedNextWeek = format(nextWeek, 'yyyy-MM-dd');
+  filterTodosByWeek() {
+    const today = new Date();
+    const nextWeek = new Date(today.getFullYear(), today.getMonth(), today.getDay() + 7);
+    const formattedNextWeek = format(nextWeek, 'yyyy-MM-dd');
     
-  //   return this.todos.filter((todo) => {
-  //     const formattedDueDate = todo.dueDate;
-  //     return formattedDueDate >= today && formattedDueDate <= formattedNextWeek;
-  //   });
-  // }
+    return this.todos.filter((todo) => {
+      const formattedDueDate = todo.dueDate;
+      return formattedDueDate >= today && formattedDueDate <= formattedNextWeek;
+    });
+  }
 
 }
