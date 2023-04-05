@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+import { Todo } from './todo';
 
 export class Projects {
   constructor(title) {
@@ -43,5 +45,26 @@ export class Projects {
       todo.completed === true;
     });
   }
+
+  filterTodosByToday() {
+    const today = new Date();
+    const formattedToday = format(today, 'yyyy-MM-dd');
+
+    return this.todos.filter((todo) => {
+      const formattedDueDate = format(todo.dueDate, 'yyyy-MM-dd');
+      return formattedToday === formattedDueDate;
+    });
+  }
+
+  // filterTodosByWeek() {
+  //   const today = new Date();
+  //   const nextWeek = new Date(today.getFullYear(), today.getMonth(), today.getDay() + 7);
+  //   const formattedNextWeek = format(nextWeek, 'yyyy-MM-dd');
+    
+  //   return this.todos.filter((todo) => {
+  //     const formattedDueDate = todo.dueDate;
+  //     return formattedDueDate >= today && formattedDueDate <= formattedNextWeek;
+  //   });
+  // }
 
 }
