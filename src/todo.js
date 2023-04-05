@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+
 export class Todo {
   constructor(title, description, dueDate, priority, completed = false) {
     this.title = title;
@@ -21,5 +23,9 @@ export class Todo {
 
   getDueDate() {
     return this.dueDate;
+  }
+
+  getFormattedDueDate() {
+    return format(this.dueDate, 'yyyy-MM-dd');
   }
 }
