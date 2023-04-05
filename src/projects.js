@@ -51,19 +51,19 @@ export class Projects {
     const formattedToday = format(today, 'yyyy-MM-dd');
 
     return this.todos.filter((todo) => {
-      const formattedDueDate = format(todo.dueDate, 'yyyy-MM-dd');
+      const formattedDueDate = todo.getFormattedDueDate()
       return formattedToday === formattedDueDate;
     });
   }
 
   filterTodosByWeek() {
     const today = new Date();
-    const nextWeek = new Date(today.getFullYear(), today.getMonth(), today.getDay() + 7);
-    const formattedNextWeek = format(nextWeek, 'yyyy-MM-dd');
-    
+    const nextWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 7);
+  
     return this.todos.filter((todo) => {
-      const formattedDueDate = todo.dueDate;
-      return formattedDueDate >= today && formattedDueDate <= formattedNextWeek;
+      const formattedDueDate = format(todo.dueDate, 'yyyy-MM-dd');
+      const dueDate = new Date(formattedDueDate);
+      return dueDate >= today && dueDate < nextWeek;
     });
   }
 
