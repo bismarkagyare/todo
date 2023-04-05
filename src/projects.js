@@ -1,5 +1,5 @@
 
-class Projects {
+export class Projects {
   constructor(title) {
     this.title = title;
     this.todos = [];
