@@ -13,7 +13,11 @@ export class Projects {
     return this.title;
   }
 
-  addTodo(todo) {
+  getAllTodos() {
+    return this.todos;
+  }
+
+  addTodoToProject(todo) {
     this.todos.push(todo);
   }
 
