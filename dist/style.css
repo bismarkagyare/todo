@@ -180,7 +180,7 @@ label i {
 
 /* add project modal styles */
 
-.add-project-preview {
+.add-project-modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -190,4 +190,10 @@ label i {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.add-project-modal.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
