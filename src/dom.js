@@ -19,7 +19,7 @@ function addProjectModal() {
   const projectContainer = document.querySelector('.add-project-container');
   projectContainer.appendChild(addProjectModalContainer);
   const projectModal = document.querySelector('.add-project-modal');
-  projectModal.style.display = 'block';
+  projectModal.classList.add('show');
 }
 
 export default addProject;
