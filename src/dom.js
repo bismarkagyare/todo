@@ -19,10 +19,10 @@ function addProjectModal() {
     <div class="add-project-modal-wrapper">
       <div class="add-project-modal-content">
         <h1 class="add-project-title">add project</h1>
-        <input type="text" class="input-project-modal" id="input-project-modal">
+        <input type="text" class="input-project-modal" id="input-project-modal" placeholder="Enter Project Name">
         <div class="project-modal-btns">
-          <button class="btn-add-modal">add</button>
-          <button class="btn-cancel-modal">cancel</button>
+          <button class="btn-add-modal btn">add</button>
+          <button class="btn-cancel-modal btn">cancel</button>
         </div>
       </div>
     </div>
