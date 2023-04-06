@@ -211,3 +211,40 @@ label i {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
   animation: fadeIn .2s;
 }
+
+.input-project-modal {
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.project-modal-btns .btn {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+  padding: 10px 12px;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.project-modal-btns .btn:hover {
+  background-color: #2c974b;
+}
+
+.project-modal-btns .btn-cancel-modal {
+  background-color: #ff4742;
+}
