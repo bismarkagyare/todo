@@ -9,6 +9,7 @@ function addProjectModal() {
 
   addProjectModalContainer.innerHTML += ` 
     <div class="add-project-modal-content">
+      <h1 class="add-project-title">add project</h1>
       <input type="text" class="input-project-modal" id="input-project-modal">
       <div class="project-modal-btns">
         <button class="btn-add-modal">add</button>
