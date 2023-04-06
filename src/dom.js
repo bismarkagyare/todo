@@ -8,11 +8,18 @@ function addProjectModal() {
   addProjectModalContainer.classList.add('add-project-modal');
 
   addProjectModalContainer.innerHTML += ` 
-    <div class="add-project-modal">
+    <div class="add-project-modal-content">
       <input type="text" class="input-project-modal" id="input-project-modal">
       <div class="project-modal-btns">
         <button class="btn-add-modal">add</button>
         <button class="btn-cancel-modal">cancel</button>
     </div>
-    `
+    `;
+  
+  const projectContainer = document.querySelector('.add-project-container');
+  projectContainer.appendChild(addProjectModalContainer);
+  const projectModal = document.querySelector('.add-project-modal');
+  projectModal.style.display = 'block';
 }
+
+export default addProject;
