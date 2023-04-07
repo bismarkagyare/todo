@@ -1,5 +1,6 @@
 import { Projects } from "./projects";
 import { Todo } from "./todo";
-import addProject from "./dom";
+import AddProject from "./dom";
 
-addProject();
+// addProject();
+AddProject.addProject();
