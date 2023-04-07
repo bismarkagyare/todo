@@ -1,16 +1,29 @@
-class AddProject {
-  static addProject() {
-    const addProjectBtn = document.querySelector('.add-project-btn');
-    addProjectBtn.addEventListener('click', this.showModal);
+import { Projects } from "./projects";
 
-    window.addEventListener('click', (e) => {
-      if (e.target.classList.contains('add-project-modal-wrapper')) {
-        this.removeModal();
-      }
+class AddProject {
+  static showModal() {
+    document.addEventListener('DOMContentLoaded', () => {
+      const addProjectBtn = document.querySelector('.add-project-btn');
+      addProjectBtn.addEventListener('click', this.createModal.bind(this));
+  
+      window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('add-project-modal-wrapper')) {
+          this.removeModal();
+        }
+      });
     });
   }
 
-  static showModal() {
+  static btnsFunctions() {
+    const addBtn = document.querySelector('.btn-add-modal');
+      //console.log(addBtn);
+    addBtn.addEventListener('click', () => this.addNewProject());
+
+    const cancelBtn = document.querySelector('.btn-cancel-modal');
+    cancelBtn.addEventListener('click', () => this.removeModal());
+  }
+
+  static createModal() {
     const addProjectModalContainer = document.createElement('div');
     addProjectModalContainer.classList.add('add-project-modal');
 
@@ -35,6 +48,13 @@ class AddProject {
     const removeModal = document.querySelector('.add-project-modal');
     removeModal.remove();
     document.body.style.overflow = '';
+  }
+
+  static addNewProject() {
+    const newProjectTitle = document.getElementById('input-project-modal').value;
+    const newProject = new Projects(newProjectTitle);
+    console.log(newProject);
+    this.removeModal();
   }
 }
 
