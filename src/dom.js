@@ -1,5 +1,4 @@
-
-export default class AddProject {
+class AddProject {
   static addProject() {
     const addProjectBtn = document.querySelector('.add-project-btn');
     addProjectBtn.addEventListener('click', this.showModal);
@@ -38,3 +37,5 @@ export default class AddProject {
     document.body.style.overflow = '';
   }
 }
+
+export default AddProject;
