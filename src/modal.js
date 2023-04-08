@@ -35,7 +35,7 @@ function createProjectModal() {
   addBtn.addEventListener('click', () => {
     const projectTitle = document.getElementById('input-project-modal');
     if (projectTitle.value.trim() === '') {
-      alert('please enter a project titile');
+      alert('Please enter a project title!');
     } else {
       console.log(projectTitle.value);
       removeModal();
