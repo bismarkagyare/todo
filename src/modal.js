@@ -42,7 +42,11 @@ function createProjectModal() {
       alert("Please enter a project title.");
     } else {
       const newProject = new Projects(projectTitle);
-      console.log(newProject);
+      const newProjectTitle = document.createElement('h2');
+      newProjectTitle.classList.add('project-title');
+      newProjectTitle.textContent = newProject.title;
+      const projectContainer = document.querySelector('.projects-container');
+      projectContainer.insertBefore(newProjectTitle, projectContainer.querySelector('.add-project-container'));
       removeModal();
     }
   });
