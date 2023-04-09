@@ -1,3 +1,5 @@
+import { Projects } from "./projects";
+
 function addProjectModal() {
   const addProjectBtn = document.querySelector('.add-project-btn');
   addProjectBtn.addEventListener('click', createProjectModal);
@@ -33,11 +35,14 @@ function createProjectModal() {
 
   const addBtn = document.querySelector('.btn-add-modal');
   addBtn.addEventListener('click', () => {
-    const projectTitle = document.getElementById('input-project-modal');
-    if (projectTitle.value.trim() === '') {
-      alert('Please enter a project title!');
+    const inputField = document.querySelector('.input-project-modal');
+    const projectTitle = inputField.value.trim();
+
+    if (projectTitle === "") {
+      alert("Please enter a project title.");
     } else {
-      console.log(projectTitle.value);
+      const newProject = new Projects(projectTitle);
+      console.log(newProject);
       removeModal();
     }
   });
