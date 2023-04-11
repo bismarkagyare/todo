@@ -66,5 +66,4 @@ export class Projects {
       return dueDate >= today && dueDate < nextWeek;
     });
   }
-
 }
