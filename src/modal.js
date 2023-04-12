@@ -55,6 +55,19 @@ function createProjectModal() {
       closeButton.addEventListener('click', () => {
         newProjectTitle.remove();
       });
+
+      newProjectTitle.addEventListener('click', () => {
+        const projectsPreview = document.querySelector('.projects-preview');
+        projectsPreview.innerHTML = `
+          <h1>${newProjectTitle.textContent}</h1>
+          <div class="add-task">
+            <div class="add-task-btn">
+              <i class="fas fa-plus"></i>
+              <p>add task</p>
+            </div>
+          </div>
+        `;
+      });
       removeModal();
     }
   });
