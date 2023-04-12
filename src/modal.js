@@ -47,12 +47,17 @@ function createProjectModal() {
       const closeButton = document.createElement('span');
       closeButton.className = 'close-btn';
       closeButton.innerHTML = '<i class="fa fa-window-close" aria-hidden="true"></i>';
-      newProjectTitle.classList.add('project-title');
+      newProjectTitle.classList.add('modal-project-title');
       newProjectTitle.textContent = newProject.title;
       newProjectTitle.appendChild(closeButton);
       const projectContainer = document.querySelector('.projects-container');
       projectContainer.insertBefore(newProjectTitle, projectContainer.querySelector('.add-project-container'));
       projectsList.appendChild(newProjectTitle);
+      const modalProjectTitle = document.querySelector('.modal-project-title');
+      const closeButtonElement = modalProjectTitle.querySelector('.close-btn');
+      closeButtonElement.addEventListener('click', () => {
+        modalProjectTitle.remove();
+      });
       removeModal();
     }
   });
