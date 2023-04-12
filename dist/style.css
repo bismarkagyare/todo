@@ -177,6 +177,7 @@ label i {
 .add-project-btn {
   display: flex;
   align-items: center;
+  gap: 0.8rem;
 }
 
 /* footer styles */
