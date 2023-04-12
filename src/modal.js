@@ -44,8 +44,12 @@ function createProjectModal() {
     } else {
       const newProject = new Projects(projectTitle);
       const newProjectTitle = document.createElement('h2');
+      const closeButton = document.createElement('span');
+      closeButton.className = 'close-btn';
+      closeButton.innerHTML = '<i class="fa fa-window-close" aria-hidden="true"></i>';
       newProjectTitle.classList.add('project-title');
       newProjectTitle.textContent = newProject.title;
+      newProjectTitle.appendChild(closeButton);
       const projectContainer = document.querySelector('.projects-container');
       projectContainer.insertBefore(newProjectTitle, projectContainer.querySelector('.add-project-container'));
       projectsList.appendChild(newProjectTitle);
