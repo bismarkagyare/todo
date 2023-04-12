@@ -174,7 +174,7 @@ label i {
   font-size: 1.3rem;
 }
 
-.add-project-btn {
+.add-project-btn{
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -309,4 +309,36 @@ label i {
 .close-btn {
   display: none;
   cursor: pointer;
+}
+
+/* projects preview styles */
+
+.projects-preview {
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Poppins', cursive;
+  margin-top: 2rem;
+}
+
+.projects-preview h1 {
+  font-size: 2.5rem;
+  padding: 1rem;
+  font-weight: normal;
+  background: #eee;
+  border-radius: 5px;
+  letter-spacing: 0.25rem;
+}
+
+.add-task-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.add-task-btn p {
+  font-size: 1.3rem;
+  text-transform: capitalize;
 }
