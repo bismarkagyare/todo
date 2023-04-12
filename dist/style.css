@@ -133,10 +133,10 @@ label i {
 }
 
 .side:hover {
-  background-color: #FAF8FF;
-  opacity: 0.5;
+  background-color: #c8cfdc;
+  /* opacity: 0.5; */
   /* transform: scale(1.1); */
-  transition: 500ms linear; 
+  /* transition: 500ms linear;  */
   border-radius: 5px;
 }
 
@@ -289,4 +289,24 @@ label i {
 .projects-list h2 {
   font-weight: normal;
   font-family: 'Poppins', cursive;
+}
+
+.modal-project-title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.modal-project-title:hover {
+  background-color: #c8cfdc;
+  border-radius: 5px;
+}
+
+.modal-project-title:hover .close-btn{
+  display: block;
+}
+
+.close-btn {
+  display: none;
+  cursor: pointer;
 }
