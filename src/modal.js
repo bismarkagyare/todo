@@ -36,7 +36,6 @@ function createProjectModal() {
   const addBtn = document.querySelector('.btn-add-modal');
   addBtn.addEventListener('click', () => {
     const inputField = document.querySelector('.input-project-modal');
-    const projectsList = document.querySelector('.projects-list');
     const projectTitle = inputField.value.trim();
 
     if (projectTitle === "") {
@@ -50,13 +49,11 @@ function createProjectModal() {
       newProjectTitle.classList.add('modal-project-title');
       newProjectTitle.textContent = newProject.title;
       newProjectTitle.appendChild(closeButton);
-      const projectContainer = document.querySelector('.projects-container');
-      projectContainer.insertBefore(newProjectTitle, projectContainer.querySelector('.add-project-container'));
+      const projectsList = document.querySelector('.projects-list');
       projectsList.appendChild(newProjectTitle);
-      const modalProjectTitle = document.querySelector('.modal-project-title');
-      const closeButtonElement = modalProjectTitle.querySelector('.close-btn');
-      closeButtonElement.addEventListener('click', () => {
-        modalProjectTitle.remove();
+
+      closeButton.addEventListener('click', () => {
+        newProjectTitle.remove();
       });
       removeModal();
     }
