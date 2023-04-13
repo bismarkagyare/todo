@@ -17,8 +17,8 @@ function createProjectModal() {
   addProjectModalContainer.classList.add('add-project-modal');
 
   addProjectModalContainer.innerHTML = ` 
-    <div class="add-project-modal-wrapper">
-      <div class="add-project-modal-content">
+    <div class="add-project-modal-wrapper modal">
+      <div class="add-project-modal-content modal-content">
         <h1 class="add-project-title">add project</h1>
         <input type="text" class="input-project-modal" id="input-project-modal" placeholder="Enter Project Name" required>
         <div class="project-modal-btns">
@@ -108,8 +108,8 @@ function createProjectModal() {
     addTaskModalContainer.classList.add('add-task-modal');
   
     addTaskModalContainer.innerHTML += `
-      <div class="add-task-modal-wrapper">
-        <div class="add-task-modal-content">
+      <div class="add-task-modal-wrapper modal">
+        <div class="add-task-modal-content modal-content">
           <h2 class="add-task-title">Add New Task</h2>
           <form class="add-task-form">
             <label for="task-title">Title:</label>
