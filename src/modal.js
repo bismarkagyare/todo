@@ -98,6 +98,46 @@ function createProjectModal() {
     addBtn.removeEventListener('click', handleAddProject);
     cancelBtn.removeEventListener('click', handleCloseModal);
   }
+
+  function addTaskModal() {
+    const addTaskModalContainer = document.createElement('div');
+    addTaskModalContainer.classList.add('add-task-modal');
+  
+    addTaskModalContainer.innerHTML += `
+      <div class="add-task-modal-wrapper">
+        <div class="add-task-modal-content">
+          <h1 class="add-task-title">Add New Task</h1>
+          <form class="add-task-form">
+            <label for="task-title">Title:</label>
+            <input type="text" id="task-title" name="task-title" required>
+            <label for="task-description">Description:</label>
+            <textarea id="task-description" name="task-description" required></textarea>
+            <label for="task-date">Date:</label>
+            <input type="date" id="task-date" name="task-date" required>
+            <label for="task-priority">Priority:</label>
+            <select id="task-priority" name="task-priority">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+            <div class="task-modal-btns">
+              <button class="btn-add-task btn">Add Task</button>
+              <button class="btn-cancel-task btn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    `;
+  
+    const projectsPreview = document.querySelector('.projects-preview');
+    projectsPreview.appendChild(addTaskModalContainer);
+  
+    const cancelBtn = document.querySelector('.btn-cancel-task');
+    cancelBtn.addEventListener('click', () => {
+      addTaskModalContainer.remove();
+    });
+  }
+  
 }
 
 
