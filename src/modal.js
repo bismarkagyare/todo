@@ -52,6 +52,10 @@ function createProjectModal() {
 
       newProjectTitle.addEventListener('click', () => {
         displayProjectInPreview(newProject.title);
+        const addTaskButton = document.querySelector('.add-task-btn');
+        addTaskButton.addEventListener('click', () => {
+          addTaskModal();
+        })
       });
       addCloseButton(newProjectTitle);
 
@@ -106,7 +110,7 @@ function createProjectModal() {
     addTaskModalContainer.innerHTML += `
       <div class="add-task-modal-wrapper">
         <div class="add-task-modal-content">
-          <h1 class="add-task-title">Add New Task</h1>
+          <h2 class="add-task-title">Add New Task</h2>
           <form class="add-task-form">
             <label for="task-title">Title:</label>
             <input type="text" id="task-title" name="task-title" required>
