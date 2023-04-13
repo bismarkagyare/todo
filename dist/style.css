@@ -207,7 +207,8 @@ label i {
   to {opacity: 1}
 }
 
-.add-project-modal-wrapper {
+.add-project-modal-wrapper,
+.add-task-modal-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -218,7 +219,8 @@ label i {
   backdrop-filter: blur(3px);
 }
 
-.add-project-modal-content {
+.add-project-modal-content,
+.add-task-modal-content {
   position: absolute;
   top: 50%;
   left: 50%;
