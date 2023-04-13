@@ -342,3 +342,22 @@ label i {
   font-size: 1.3rem;
   text-transform: capitalize;
 }
+
+/* add new task modal */
+
+.add-task-modal-content {
+  width: 400px;
+  height: 80vh;
+}
+
+.add-task-modal-content input,
+.add-task-modal-content textarea {
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.1rem;
+  outline: none;
+  font-family: 'Poppins', cursive;
+}
