@@ -346,15 +346,21 @@ label i {
 /* add new task modal */
 
 .add-task-modal-content {
-  width: 400px;
+  max-width: 500px;
   height: 80vh;
+  border-radius: 10px;
+}
+
+.add-task-form {
+  width: 100%;
 }
 
 .add-task-modal-content input,
 .add-task-modal-content textarea {
+  /* display: block; */
   padding: 10px;
   margin: 5px 0;
-  border: 2px solid #eee;
+  border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
   font-size: 1.1rem;
