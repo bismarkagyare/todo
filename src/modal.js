@@ -112,18 +112,26 @@ function createProjectModal() {
         <div class="add-task-modal-content modal-content">
           <h2 class="add-task-title">Add New Task</h2>
           <form class="add-task-form">
-            <label for="task-title">Title:</label>
-            <input type="text" id="task-title" name="task-title" required>
-            <label for="task-description">Description:</label>
-            <textarea id="task-description" name="task-description" required></textarea>
-            <label for="task-date">Date:</label>
-            <input type="date" id="task-date" name="task-date" required>
-            <label for="task-priority">Priority:</label>
-            <select id="task-priority" name="task-priority">
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-            </select>
+            <div>
+              <label for="task-title">Title:</label>
+              <input type="text" id="task-title" name="task-title" required>
+            </div>
+            <div>
+              <label for="task-description">Description:</label>
+              <textarea id="task-description" name="task-description" required></textarea>
+            </div>
+            <div>
+              <label for="task-date">Date:</label>
+              <input type="date" id="task-date" name="task-date" required>
+            </div>
+            <div>
+              <label for="task-priority">Priority:</label>
+              <select id="task-priority" name="task-priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
             <div class="task-modal-btns">
               <button class="btn-add-task btn">Add Task</button>
               <button class="btn-cancel-task btn">Cancel</button>
