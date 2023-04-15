@@ -127,6 +127,7 @@ function createProjectModal() {
             <div>
               <label for="task-priority">Priority:</label>
               <select id="task-priority" name="task-priority">
+                <option value="" disabled selected>Select Priority</option>
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
                 <option value="high">High</option>
