@@ -248,7 +248,8 @@ label i {
   gap: 0.7rem;
 }
 
-.project-modal-btns .btn {
+.project-modal-btns .btn,
+.task-modal-btns .btn {
   appearance: none;
   background-color: #2ea44f;
   border: 1px solid rgba(27, 31, 35, .15);
@@ -267,15 +268,18 @@ label i {
   font-weight: 600;
 }
 
-.project-modal-btns .btn:hover {
+.project-modal-btns .btn,
+.task-modal-btns .btn-add-task:hover {
   background-color: #2c974b;
 }
 
-.project-modal-btns .btn-cancel-modal {
+.project-modal-btns .btn-cancel-modal,
+.task-modal-btns .btn-cancel-task{
   background-color: #ff4742;
 }
 
-.project-modal-btns .btn-cancel-modal:hover {
+.project-modal-btns .btn-cancel-modal,
+.task-modal-btns .btn-cancel-task:hover {
   background-color: #e4372e;
 }
 
@@ -347,7 +351,7 @@ label i {
 
 .add-task-modal-content {
   max-width: 500px;
-  height: 80vh;
+  height: 82vh;
   border-radius: 10px;
 }
 
@@ -356,10 +360,9 @@ label i {
 }
 
 .add-task-modal-content input,
-.add-task-modal-content textarea {
-  /* display: block; */
-  padding: 10px;
-  margin: 5px 0;
+.add-task-modal-content textarea,
+.add-task-modal-content select {
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
@@ -367,3 +370,14 @@ label i {
   outline: none;
   font-family: 'Poppins', cursive;
 }
+
+.add-task-modal-content label {
+  padding: 0;
+  width: 100%;
+  font-weight: 500;
+}
+
+.task-modal-btns {
+  margin-top: 1rem;
+}
+
