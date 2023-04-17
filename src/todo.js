@@ -28,4 +28,20 @@ export class Todo {
   getFormattedDueDate() {
     return format(this.dueDate, 'yyyy-MM-dd');
   }
+
+  setDescription(description) {
+    this.description = description;
+  }
+
+  getDescription() {
+    return this.description;
+  }
+
+  setPriority(priority) {
+    this.priority = priority;
+  }
+
+  getPriority() {
+    return this.priority;
+  }
 }
