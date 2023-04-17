@@ -153,10 +153,13 @@ function createProjectModal() {
     window.addEventListener('click', (e) => {
       if (e.target.classList.contains('add-task-modal-wrapper')) {
         const removeTaskModal = document.querySelector('.add-task-modal');
-        removeTaskModal.remove();
-        document.body.style.overflow = '';
+        if (removeTaskModal) {
+          removeTaskModal.remove();
+          document.body.style.overflow = '';
+        }
       }
-    });  
+    });
+    
   }
   
 }
