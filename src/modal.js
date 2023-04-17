@@ -1,4 +1,5 @@
 import { Projects } from "./projects";
+import { Todo } from "./todo";
 
 function addProjectModal() {
   const addProjectBtn = document.querySelector('.add-project-btn');
@@ -55,7 +56,7 @@ function createProjectModal() {
         const addTaskButton = document.querySelector('.add-task-btn');
         addTaskButton.addEventListener('click', () => {
           addTaskModal();
-        })
+        });
       });
       addCloseButton(newProjectTitle);
 
@@ -74,6 +75,7 @@ function createProjectModal() {
     const projectsPreview = document.querySelector('.projects-preview');
     projectsPreview.innerHTML = `
       <h1>${projectTitle}</h1>
+      <div class="new-tasks"></div>
       <div class="add-task">
         <div class="add-task-btn">
           <i class="fas fa-plus"></i>
@@ -144,9 +146,12 @@ function createProjectModal() {
   
     const projectsPreview = document.querySelector('.projects-preview');
     projectsPreview.appendChild(addTaskModalContainer);
+
+    const addNewTaskBtn = document.querySelector('.btn-add-task');
+    addNewTaskBtn.addEventListener('click', handleNewTask);
   
-    const cancelBtn = document.querySelector('.btn-cancel-task');
-    cancelBtn.addEventListener('click', () => {
+    const cancelNewTaskBtn = document.querySelector('.btn-cancel-task');
+    cancelNewTaskBtn.addEventListener('click', () => {
       addTaskModalContainer.remove();
     });
 
@@ -160,6 +165,50 @@ function createProjectModal() {
       }
     });
     
+  }
+
+  function handleNewTask(e) {
+    e.preventDefault();
+    const taskTitle = document.getElementById('task-title').value;
+    const taskDescription = document.getElementById('task-description').value;
+    const taskDate = document.getElementById('task-date').value;
+    const taskPriority = document.getElementById('task-priority').value;
+
+    if (taskTitle === '' || taskDescription === '' || taskDate === '' || taskPriority === '') {
+      alert('Please fill out all fields');
+    } else {
+      const newTask = new Todo(taskTitle, taskDescription, taskDate, taskPriority);
+      const newTaskTitle = createNewTaskContainer(newTask);
+      const newTaskContainer = document.querySelector('.new-tasks');
+      newTaskContainer.appendChild(newTaskTitle);
+    }
+  }
+
+  function createNewTaskContainer(task) {
+    const newTaskContainer = document.createElement('div');
+
+    const newTaskTitle = document.createElement('h3');
+    newTaskTitle.classList.add('new-task-title');
+    newTaskTitle.textContent = task.title;
+
+    const newTaskDescription = document.createElement('p');
+    newTaskDescription.classList.add('new-task-description');
+    newTaskDescription.textContent = task.description;
+
+    const newTaskDate = document.createElement('p');
+    newTaskDate.classList.add('new-task-date');
+    newTaskDate.textContent = task.dueDate;
+
+    const newTaskPriority = document.createElement('p');
+    newTaskPriority.classList.add('new-task-priority');
+    newTaskPriority.textContent = task.priority;
+
+    newTaskContainer.appendChild(newTaskTitle);
+    newTaskContainer.appendChild(newTaskDescription);
+    newTaskContainer.appendChild(newTaskDate);
+    newTaskContainer.appendChild(newTaskPriority);
+
+    return newTaskContainer;
   }
   
 }
