@@ -285,7 +285,7 @@ label i {
 /* projects list */
 
 .projects-list {
-  padding: 1rem;
+  padding: 0.4rem;
   margin-bottom: 0;
 }
 
@@ -298,6 +298,7 @@ label i {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  padding: 0.5rem;
 }
 
 .modal-project-title:hover {
