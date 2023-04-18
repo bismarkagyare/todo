@@ -186,6 +186,7 @@ function createProjectModal() {
 
   function createNewTaskContainer(task) {
     const newTaskContainer = document.createElement('div');
+    newTaskContainer.classList.add('new-task-container');
 
     const newTaskTitle = document.createElement('h3');
     newTaskTitle.classList.add('new-task-title');
