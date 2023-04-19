@@ -174,16 +174,23 @@ function createProjectModal() {
     const taskDate = document.getElementById('task-date').value;
     const taskPriority = document.getElementById('task-priority').value;
 
-    if (taskTitle === '' || taskDescription === '' || taskDate === '' || taskPriority === '') {
-      alert('Please fill out all fields');
-    } else {
+    if (isFormValid(taskTitle, taskDescription, taskDate, taskPriority)) {
       const newTask = new Todo(taskTitle, taskDescription, taskDate, taskPriority);
       const newTaskTitle = createNewTaskContainer(newTask);
       const newTaskContainer = document.querySelector('.new-tasks');
       newTaskContainer.appendChild(newTaskTitle);
+      handleCloseTaskModal();
     }
 
-    handleCloseTaskModal()
+    //handleCloseTaskModal();
+  }
+
+  function isFormValid(taskTitle, taskDescription, taskDate, taskPriority) {
+    if (taskTitle === '' || taskDescription === '' || taskDate === '' || taskPriority === '') {
+      alert('Please fill out all fields');
+      return false;
+    }
+    return true;
   }
 
   function createNewTaskContainer(task) {
