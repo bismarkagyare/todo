@@ -386,4 +386,25 @@ label i {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1rem;
+}
+
+.task-details-left-side {
+  display: flex;
+  padding-left: 1.2rem;
+  gap: 1rem;
+  /* text-transform: capitalize; */
+}
+
+.task-checkmark {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.task-details-right-side {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding-right: 1rem;
 }
