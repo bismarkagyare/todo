@@ -387,6 +387,8 @@ label i {
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
+  border: 1px solid #969696;
+  border-radius: 5px;
 }
 
 .task-details-left-side {
@@ -399,7 +401,7 @@ label i {
 .task-checkmark {
   display: flex;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .task-details-right-side {
