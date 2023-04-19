@@ -380,3 +380,10 @@ label i {
   margin-top: 1rem;
 }
 
+/* new task details */
+
+.new-task-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
