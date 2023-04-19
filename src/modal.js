@@ -188,6 +188,9 @@ function createProjectModal() {
     const newTaskContainer = document.createElement('div');
     newTaskContainer.classList.add('new-task-container');
 
+    const taskLeftSide = document.createElement('div');
+    const taskRightSide = document.createElement('div');
+
     const newTaskTitle = document.createElement('h3');
     newTaskTitle.classList.add('new-task-title');
     newTaskTitle.textContent = task.title;
@@ -204,10 +207,13 @@ function createProjectModal() {
     newTaskPriority.classList.add('new-task-priority');
     newTaskPriority.textContent = task.priority;
 
-    newTaskContainer.appendChild(newTaskTitle);
-    newTaskContainer.appendChild(newTaskDescription);
-    newTaskContainer.appendChild(newTaskDate);
-    newTaskContainer.appendChild(newTaskPriority);
+    taskLeftSide.appendChild(newTaskTitle);
+    taskLeftSide.appendChild(newTaskDescription);
+    taskRightSide.appendChild(newTaskDate);
+    taskRightSide.appendChild(newTaskPriority);
+
+    newTaskContainer.appendChild(taskLeftSide);
+    newTaskContainer.appendChild(taskRightSide);
 
     return newTaskContainer;
   }
