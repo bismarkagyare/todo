@@ -189,11 +189,14 @@ function createProjectModal() {
     newTaskContainer.classList.add('new-task-container');
   
     newTaskContainer.innerHTML = `
-      <div class="task-left-side">
-        <h3 class="new-task-title">${task.title}</h3>
-        <p class="new-task-description">${task.description}</p>
+      <div class="task-details-left-side">
+        <div class="task-checkmark"><i class="fa-regular fa-circle"></i></div>
+        <div class="task-title-desc">
+          <h3 class="new-task-title">${task.title}</h3>
+          <p class="new-task-description">${task.description}</p>
+        </div>
       </div>
-      <div class="task-right-side">
+      <div class="task-details-right-side">
         <p class="new-task-date">${task.dueDate}</p>
         <p class="new-task-priority">${task.priority}</p>
         <i class="fa fa-trash" aria-hidden="true"></i>
