@@ -182,6 +182,8 @@ function createProjectModal() {
       const newTaskContainer = document.querySelector('.new-tasks');
       newTaskContainer.appendChild(newTaskTitle);
     }
+
+    handleCloseTaskModal()
   }
 
   function createNewTaskContainer(task) {
@@ -206,6 +208,14 @@ function createProjectModal() {
     `;
   
     return newTaskContainer;
+  }
+
+  function handleCloseTaskModal() {
+    const removeModal = document.querySelector('.add-task-modal');
+    removeModal.remove();
+    document.body.style.overflow = '';
+    addBtn.removeEventListener('click', handleNewTask);
+    cancelBtn.removeEventListener('click', handleCloseModal);
   }
   
   
