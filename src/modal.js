@@ -187,36 +187,24 @@ function createProjectModal() {
   function createNewTaskContainer(task) {
     const newTaskContainer = document.createElement('div');
     newTaskContainer.classList.add('new-task-container');
-
-    const taskLeftSide = document.createElement('div');
-    const taskRightSide = document.createElement('div');
-
-    const newTaskTitle = document.createElement('h3');
-    newTaskTitle.classList.add('new-task-title');
-    newTaskTitle.textContent = task.title;
-
-    const newTaskDescription = document.createElement('p');
-    newTaskDescription.classList.add('new-task-description');
-    newTaskDescription.textContent = task.description;
-
-    const newTaskDate = document.createElement('p');
-    newTaskDate.classList.add('new-task-date');
-    newTaskDate.textContent = task.dueDate;
-
-    const newTaskPriority = document.createElement('p');
-    newTaskPriority.classList.add('new-task-priority');
-    newTaskPriority.textContent = task.priority;
-
-    taskLeftSide.appendChild(newTaskTitle);
-    taskLeftSide.appendChild(newTaskDescription);
-    taskRightSide.appendChild(newTaskDate);
-    taskRightSide.appendChild(newTaskPriority);
-
-    newTaskContainer.appendChild(taskLeftSide);
-    newTaskContainer.appendChild(taskRightSide);
-
+  
+    newTaskContainer.innerHTML = `
+      <div class="task-left-side">
+        <h3 class="new-task-title">${task.title}</h3>
+        <p class="new-task-description">${task.description}</p>
+      </div>
+      <div class="task-right-side">
+        <p class="new-task-date">${task.dueDate}</p>
+        <p class="new-task-priority">${task.priority}</p>
+        <i class="fa fa-trash" aria-hidden="true"></i>
+        <i class="fas fa-edit"></i>
+        <i class="fa-regular fa-star"></i>
+      </div>
+    `;
+  
     return newTaskContainer;
   }
+  
   
 }
 
