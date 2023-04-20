@@ -39,9 +39,12 @@ function createProjectModal() {
   const cancelBtn = document.querySelector('.btn-cancel-modal');
   cancelBtn.addEventListener('click', handleCloseModal);
 
+  //let tasks = [];
+
   function handleAddProject() {
     const inputField = document.querySelector('.input-project-modal');
     const projectTitle = inputField.value.trim();
+
 
     if (projectTitle === "") {
       alert("Please enter a project title.");
