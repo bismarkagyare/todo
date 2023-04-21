@@ -4,6 +4,9 @@
   --header: #77b5d9;
   --sidebar: #d7eaf3;
   --project-clr: #14397d;
+  --text-clr1: rgb(37,41,48);
+  --text-clr2: rgb(93,103,120);
+  --bg-clr: rgba(0,0,0,0);
 }
 
 * {
@@ -44,6 +47,7 @@ header {
 }
 
 .header-title p {
+  color: var(--text-clr1);
   display: inline-block;
   vertical-align: middle;
 }
@@ -105,7 +109,9 @@ label i {
 .home h2 {
   border-bottom: 2px solid #000;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
+  color: var(--text-clr1);
+  letter-spacing: 0.25rem;
 }
 
 .home img {
@@ -127,6 +133,7 @@ label i {
   font-family: 'Poppins', cursive;
   font-size: 1.3rem;
   width: 100%;
+  color: var(--text-clr1);
 }
 
 .side {
@@ -139,6 +146,10 @@ label i {
 }
 
 /* projects container */
+
+.project-title {
+  color: var(--text-clr1);
+}
 
 .projects-container {
   display: flex;
@@ -395,7 +406,7 @@ label i {
   display: flex;
   padding-left: 1.2rem;
   gap: 1rem;
-  /* text-transform: capitalize; */
+  
 }
 
 .task-checkmark {
@@ -409,4 +420,14 @@ label i {
   flex-direction: row;
   gap: 0.5rem;
   padding-right: 1rem;
+}
+
+.new-task-description,
+.new-task-date,
+.new-task-priority {
+  font-family: 'Poppins';
+  color: var(--text-clr2);
+  font-weight: 400;
+  background: var(--bg-clr);
+  text-decoration: none solid rgb(93,103,120);
 }
