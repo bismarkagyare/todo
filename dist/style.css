@@ -435,3 +435,20 @@ label i {
   background: var(--bg-clr);
   text-decoration: none solid rgb(93,103,120);
 }
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 480px){
+  body {
+    display: grid;
+    grid-template-rows: auto 3fr auto;
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}
