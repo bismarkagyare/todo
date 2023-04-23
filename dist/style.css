@@ -306,27 +306,41 @@ label i {
 .projects-list h2 {
   font-weight: normal;
   font-family: 'Poppins', cursive;
+  letter-spacing: 0.15rem;
 }
 
-.modal-project-title {
+.modal-project-title-container {
   display: flex;
   justify-content: space-between;
-  cursor: pointer;
-  padding: 0.5rem;
+  align-items: center;
+  padding: 0.35rem;
+  padding-left: 1rem;
 }
 
-.modal-project-title:hover {
+.title-icon-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-project-title-container:hover {
   background-color: #c8cfdc;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-.modal-project-title:hover .close-btn{
+.modal-project-title-container:hover .close-btn{
   display: block;
 }
 
 .close-btn {
   display: none;
   cursor: pointer;
+}
+
+.close-btn i {
+  font-size: 1.5rem;
 }
 
 /* projects preview styles */
@@ -449,6 +463,52 @@ label i {
   main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 1fr;
   }
+
+  .modal-content {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .input-project-modal {
+    font-size: 1.1rem;
+  }
+
+  .add-task-modal-content {
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin: 0;
+  }
+
+  .add-task-modal-content input,
+  .add-task-modal-content textarea,
+  .add-task-modal-content select {
+    padding: 4px;
+    font-size: 1rem;
+    border-radius: 3px;
+  }
+
+  .add-task-modal-content label {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .task-modal-btns {
+    margin-top: 0.5rem;
+  }
+
+  .task-modal-btns .btn {
+    padding: 4px 6px;
+  }
+
+  .new-task-container {
+    font-size: 0.8rem;
+  }
+
+  .task-checkmark i {
+    font-size: 1rem;
+  }
+
 }
