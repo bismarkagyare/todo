@@ -67,12 +67,30 @@ function createProjectModal() {
     }
   }
 
+
   function createProjectTitleElement(project) {
+    const projectTitleContainer = document.createElement('div');
+    projectTitleContainer.classList.add('modal-project-title-container');
+
+    const titleIconDiv = document.createElement('div');
+    titleIconDiv.classList.add('title-icon-div');
+    
     const newProjectTitle = document.createElement('h2');
     newProjectTitle.classList.add('modal-project-title');
     newProjectTitle.textContent = project.title;
-    return newProjectTitle;
+    
+    const newProjectIcon = document.createElement('span');
+    newProjectIcon.classList.add('modal-project-icon');
+    newProjectIcon.innerHTML = '<i class="fa-solid fa-bars"></i>';
+
+    titleIconDiv.appendChild(newProjectIcon);
+    titleIconDiv.appendChild(newProjectTitle);
+    
+    projectTitleContainer.appendChild(titleIconDiv);
+  
+    return projectTitleContainer;
   }
+  
 
   function displayProjectInPreview(projectTitle) {
     const projectsPreview = document.querySelector('.projects-preview');
