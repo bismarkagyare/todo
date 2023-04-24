@@ -176,6 +176,7 @@ function createProjectModal() {
       addTaskModalContainer.remove();
     });
 
+
     window.addEventListener('click', (e) => {
       if (e.target.classList.contains('add-task-modal-wrapper')) {
         const removeTaskModal = document.querySelector('.add-task-modal');
@@ -202,8 +203,6 @@ function createProjectModal() {
       newTaskContainer.appendChild(newTaskTitle);
       handleCloseTaskModal();
     }
-
-    //handleCloseTaskModal();
   }
 
   function isFormValid(taskTitle, taskDescription, taskDate, taskPriority) {
@@ -234,6 +233,28 @@ function createProjectModal() {
         <i class="fa-regular fa-star"></i>
       </div>
     `;
+
+    const deleteBtn = newTaskContainer.querySelector('.fa-trash');
+    deleteBtn.addEventListener('click', deleteTodo);
+
+    //editTodo();
+    const editBtn = newTaskContainer.querySelector('.fa-edit');
+    editBtn.addEventListener('click', () => {
+    addTaskModal();
+    // set the current task details in the modal inputs
+    const titleInput = document.querySelector('#task-title');
+    titleInput.value = task.title;
+
+    const descriptionInput = document.querySelector('#task-description');
+    descriptionInput.value = task.description;
+
+    const dateInput = document.querySelector('#task-date');
+    dateInput.value = task.dueDate;
+
+    const priorityInput = document.querySelector('#task-priority');
+    priorityInput.value = task.priority;
+  });
+
   
     return newTaskContainer;
   }
@@ -245,8 +266,14 @@ function createProjectModal() {
     addBtn.removeEventListener('click', handleNewTask);
     cancelBtn.removeEventListener('click', handleCloseModal);
   }
-  
-  
+
+  function deleteTodo(e) {
+    const container = e.target.closest('.new-task-container');
+    if (container) {
+      container.remove();
+    }
+  }
+
 }
 
 
