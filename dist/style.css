@@ -440,6 +440,10 @@ label i {
   padding-right: 1rem;
 }
 
+.task-details-right-side i {
+  cursor: pointer;
+}
+
 .new-task-description,
 .new-task-date,
 .new-task-priority {
