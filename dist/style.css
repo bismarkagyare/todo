@@ -516,3 +516,15 @@ label i {
   }
 
 }
+
+/* styles for tablet devices */
+@media (max-width: 768px) {
+  .add-project-btn {
+    font-size: 1.3rem;
+  }
+
+  .add-project-container {
+    padding: 0;
+    padding-left: 0.5rem;
+  }
+}
