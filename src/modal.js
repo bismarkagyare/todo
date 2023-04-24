@@ -1,6 +1,8 @@
 import { Projects } from "./projects";
 import { Todo } from "./todo";
 
+const tasks = [];
+
 function addProjectModal() {
   const addProjectBtn = document.querySelector('.add-project-btn');
   addProjectBtn.addEventListener('click', createProjectModal);
@@ -198,6 +200,7 @@ function createProjectModal() {
 
     if (isFormValid(taskTitle, taskDescription, taskDate, taskPriority)) {
       const newTask = new Todo(taskTitle, taskDescription, taskDate, taskPriority);
+      //tasks.push(newTask);
       const newTaskTitle = createNewTaskContainer(newTask);
       const newTaskContainer = document.querySelector('.new-tasks');
       newTaskContainer.appendChild(newTaskTitle);
@@ -214,8 +217,11 @@ function createProjectModal() {
   }
 
   function createNewTaskContainer(task) {
+
+
     const newTaskContainer = document.createElement('div');
     newTaskContainer.classList.add('new-task-container');
+    //newTaskContainer.setAttribute('data-task-id', taskId);
   
     newTaskContainer.innerHTML = `
       <div class="task-details-left-side">
@@ -236,28 +242,10 @@ function createProjectModal() {
 
     const deleteBtn = newTaskContainer.querySelector('.fa-trash');
     deleteBtn.addEventListener('click', deleteTodo);
-
-    //editTodo();
-    const editBtn = newTaskContainer.querySelector('.fa-edit');
-    editBtn.addEventListener('click', () => {
-    addTaskModal();
-    // set the current task details in the modal inputs
-    const titleInput = document.querySelector('#task-title');
-    titleInput.value = task.title;
-
-    const descriptionInput = document.querySelector('#task-description');
-    descriptionInput.value = task.description;
-
-    const dateInput = document.querySelector('#task-date');
-    dateInput.value = task.dueDate;
-
-    const priorityInput = document.querySelector('#task-priority');
-    priorityInput.value = task.priority;
-  });
-
-  
+    
     return newTaskContainer;
   }
+
 
   function handleCloseTaskModal() {
     const removeModal = document.querySelector('.add-task-modal');
