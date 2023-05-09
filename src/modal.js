@@ -1,5 +1,5 @@
-import { Projects } from "./projects";
-import { Todo } from "./todo";
+import { Projects } from './projects';
+import { Todo } from './todo';
 
 const tasks = [];
 
@@ -12,7 +12,7 @@ function addProjectModal() {
       removeModal.remove();
       document.body.style.overflow = '';
     }
-  });  
+  });
 }
 
 function createProjectModal() {
@@ -47,9 +47,8 @@ function createProjectModal() {
     const inputField = document.querySelector('.input-project-modal');
     const projectTitle = inputField.value.trim();
 
-
-    if (projectTitle === "") {
-      alert("Please enter a project title.");
+    if (projectTitle === '') {
+      alert('Please enter a project title.');
     } else {
       const newProject = new Projects(projectTitle);
       const newProjectTitle = createProjectTitleElement(newProject);
@@ -69,30 +68,28 @@ function createProjectModal() {
     }
   }
 
-
   function createProjectTitleElement(project) {
     const projectTitleContainer = document.createElement('div');
     projectTitleContainer.classList.add('modal-project-title-container');
 
     const titleIconDiv = document.createElement('div');
     titleIconDiv.classList.add('title-icon-div');
-    
+
     const newProjectTitle = document.createElement('h2');
     newProjectTitle.classList.add('modal-project-title');
     newProjectTitle.textContent = project.title;
-    
+
     const newProjectIcon = document.createElement('span');
     newProjectIcon.classList.add('modal-project-icon');
     newProjectIcon.innerHTML = '<i class="fa-solid fa-bars"></i>';
 
     titleIconDiv.appendChild(newProjectIcon);
     titleIconDiv.appendChild(newProjectTitle);
-    
+
     projectTitleContainer.appendChild(titleIconDiv);
-  
+
     return projectTitleContainer;
   }
-  
 
   function displayProjectInPreview(projectTitle) {
     const projectsPreview = document.querySelector('.projects-preview');
@@ -107,12 +104,12 @@ function createProjectModal() {
       </div>
     `;
   }
-  
 
   function addCloseButton(projectTitleElement) {
     const closeButton = document.createElement('span');
     closeButton.classList.add('close-btn');
-    closeButton.innerHTML = '<i class="fa fa-window-close" aria-hidden="true"></i>';
+    closeButton.innerHTML =
+      '<i class="fa fa-window-close" aria-hidden="true"></i>';
     projectTitleElement.appendChild(closeButton);
 
     closeButton.addEventListener('click', () => {
@@ -131,7 +128,7 @@ function createProjectModal() {
   function addTaskModal() {
     const addTaskModalContainer = document.createElement('div');
     addTaskModalContainer.classList.add('add-task-modal');
-  
+
     addTaskModalContainer.innerHTML += `
       <div class="add-task-modal-wrapper modal">
         <div class="add-task-modal-content modal-content">
@@ -166,18 +163,17 @@ function createProjectModal() {
         </div>
       </div>
     `;
-  
+
     const projectsPreview = document.querySelector('.projects-preview');
     projectsPreview.appendChild(addTaskModalContainer);
 
     const addNewTaskBtn = document.querySelector('.btn-add-task');
     addNewTaskBtn.addEventListener('click', handleNewTask);
-  
+
     const cancelNewTaskBtn = document.querySelector('.btn-cancel-task');
     cancelNewTaskBtn.addEventListener('click', () => {
       addTaskModalContainer.remove();
     });
-
 
     window.addEventListener('click', (e) => {
       if (e.target.classList.contains('add-task-modal-wrapper')) {
@@ -188,7 +184,6 @@ function createProjectModal() {
         }
       }
     });
-    
   }
 
   function handleNewTask(e) {
@@ -199,7 +194,12 @@ function createProjectModal() {
     const taskPriority = document.getElementById('task-priority').value;
 
     if (isFormValid(taskTitle, taskDescription, taskDate, taskPriority)) {
-      const newTask = new Todo(taskTitle, taskDescription, taskDate, taskPriority);
+      const newTask = new Todo(
+        taskTitle,
+        taskDescription,
+        taskDate,
+        taskPriority
+      );
       //tasks.push(newTask);
       const newTaskTitle = createNewTaskContainer(newTask);
       const newTaskContainer = document.querySelector('.new-tasks');
@@ -209,7 +209,12 @@ function createProjectModal() {
   }
 
   function isFormValid(taskTitle, taskDescription, taskDate, taskPriority) {
-    if (taskTitle === '' || taskDescription === '' || taskDate === '' || taskPriority === '') {
+    if (
+      taskTitle === '' ||
+      taskDescription === '' ||
+      taskDate === '' ||
+      taskPriority === ''
+    ) {
       alert('Please fill out all fields');
       return false;
     }
@@ -217,12 +222,10 @@ function createProjectModal() {
   }
 
   function createNewTaskContainer(task) {
-
-
     const newTaskContainer = document.createElement('div');
     newTaskContainer.classList.add('new-task-container');
     //newTaskContainer.setAttribute('data-task-id', taskId);
-  
+
     newTaskContainer.innerHTML = `
       <div class="task-details-left-side">
         <div class="task-checkmark"><i class="fa-regular fa-circle"></i></div>
@@ -242,10 +245,9 @@ function createProjectModal() {
 
     const deleteBtn = newTaskContainer.querySelector('.fa-trash');
     deleteBtn.addEventListener('click', deleteTodo);
-    
+
     return newTaskContainer;
   }
-
 
   function handleCloseTaskModal() {
     const removeModal = document.querySelector('.add-task-modal');
@@ -261,8 +263,6 @@ function createProjectModal() {
       container.remove();
     }
   }
-
 }
-
 
 export default addProjectModal;
